@@ -36,20 +36,6 @@ async function start() {
   // Give nuxt middleware to express
   app.use(nuxt.render)
 
-  app.use(function (req, res, next) {
-    // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:' + port)
-
-    // Request methods you wish to allow
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE')
-
-    // Request headers you wish to allow
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type')
-
-    // Pass to next layer of middleware
-    next()
-  })
-  
   // Listen the server
   app.listen(port, host)
   consola.ready({
