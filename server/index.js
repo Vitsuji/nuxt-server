@@ -1,5 +1,5 @@
 const express = require('express')
-var cors = require('cors')
+const cors = require('cors')
 const consola = require('consola')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
@@ -7,7 +7,7 @@ const { Nuxt, Builder } = require('nuxt')
 const app = express()
 
 // Import config
-const config = require('../config')
+const config = require('../configs/config')
 const host = process.env.HOST || '127.0.0.1'
 const port = config.APP_PORT
 const database = require('../src/database')  // import database configuration
@@ -17,7 +17,7 @@ app.set('port', port)
 
 
 // Import and Set Nuxt.js options
-let nuxtconfig = require('../nuxt.config.js')
+let nuxtconfig = require('../configs/nuxt.config.js')
 nuxtconfig.dev = !(process.env.NODE_ENV === 'production')
 
 async function start() {

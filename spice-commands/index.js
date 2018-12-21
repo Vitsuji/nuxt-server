@@ -2,7 +2,7 @@ const assert = require('assert') // N.B: Assert module comes bundled with Node.j
 const fs = require('fs')
 const routes_dir = './src/routes/'
 const models_dir = './src/models/'
-const config = require('../config.json')
+const config = require('../configd/config.json')
 //import functions
 const create = require('./placeholders.js')
 

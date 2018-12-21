@@ -1,5 +1,5 @@
 let mongoose = require('mongoose');
-const config = require('../../config')
+const config = require('../../configs/config')
 
 class Database {
   constructor() {
