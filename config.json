@@ -1,0 +1,7 @@
+{
+  "DB": "mongodb://localhost:27017/no_spice",
+  "USER": "",
+  "PASS": "",
+  "APP_PORT": 4000,
+  "serverURL": "http://127.0.0.1:4000/api/"
+}

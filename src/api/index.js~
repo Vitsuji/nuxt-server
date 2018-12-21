@@ -1,0 +1,18 @@
+import axios from 'axios'
+const config = require('../../config')
+
+export default {
+    request (method, urn, data = null) {
+	if (!method) {
+	    console.error('API function call requires method argument')
+	    return
+	}
+
+	if (!urn) {
+	    console.error('API function call requires urn argument')
+	    return
+	}
+	var uri = config.serverURL + urn
+	return axios({method, url: uri, data })
+    }
+}
