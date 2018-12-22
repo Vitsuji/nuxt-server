@@ -6,14 +6,12 @@ class Database {
     this._connect()
   }
 _connect() {
-  mongoose.connect(config.DB, {
+  mongoose.connect(`${config.DB.host}:${config.DB.port}/${config.DB.db_name}`, {
     "useNewUrlParser": true
   }).then(() => {
     console.log('Database connection successful')
   }).catch(err => {
     console.error('Database connection error')
-    // console.log(`User: ${config.USER}`)
-    // console.log(`User: ${config.USER}`)
   })
 }
 }

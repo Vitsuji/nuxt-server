@@ -6,10 +6,10 @@ class Database {
     this._connect()
   }
 _connect() {
-  mongoose.connect(config.DB, {
+  mongoose.connect(`${config.DB.host}:${config.DB.port}/${config.DB.db_name}`, {
     "auth": { "authSource": "admin" },
-    "user": config.USER,
-    "pass": config.PASS
+    "user": config.DB.USER,
+    "pass": config.DB.PASS
   }).then(() => {
     console.log('Database connection successful')
   }).catch(err => {

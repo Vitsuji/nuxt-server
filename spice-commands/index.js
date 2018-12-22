@@ -2,7 +2,7 @@ const assert = require('assert') // N.B: Assert module comes bundled with Node.j
 const fs = require('fs')
 const routes_dir = './src/routes/'
 const models_dir = './src/models/'
-const config = require('../configd/config.json')
+const config = require('../configs/config.json')
 //import functions
 const create = require('./placeholders.js')
 
@@ -40,7 +40,7 @@ const route_dirfile_create = (routes_name, content, reference_name) => {
 
   fs.writeFile(routes_dir+'index.js', text, function (err) {
     if (err) return console.log(err)
-    console.log(`Routes Pointing to ${config.serverURL}${reference_name}`)
+    console.log(`Routes Pointing to ${config.SERVER.serverURL}${reference_name}`)
   })
 }
 

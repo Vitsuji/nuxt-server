@@ -16,7 +16,7 @@ export default {
       console.error('API function call requires urn argument')
       return
     }
-    var uri = config.serverURL + urn
+    var uri = config.SERVER.serverURL + urn
     return axios({method, url: uri, data })
   }
 }

@@ -8,8 +8,8 @@ const app = express()
 
 // Import config
 const config = require('../configs/config')
-const host = process.env.HOST || '127.0.0.1'
-const port = config.APP_PORT
+const host = config.SERVER.HOST
+const port = config.SERVER.PORT
 const database = require('../src/database')  // import database configuration
 // const todoRoutes = require('../src/routes') // import routes
 app.use(cors())
