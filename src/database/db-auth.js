@@ -11,10 +11,14 @@ _connect() {
     "user": config.DB.USER,
     "pass": config.DB.PASS
   }).then(() => {
-    console.log('Database connection successful')
+    console.log(
+      chalk.green(':) Database Connection Successful')
+    )
   }).catch(err => {
-    console.error('Database connection error')
-    console.log(`Usr: ${config.USER}`)
+    console.log(
+      chalk.red('x Database Connection Error')
+    )
+    console.log(`Usr: ${config.DB.USER}`)
   })
 }
 }
